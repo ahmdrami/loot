@@ -9,8 +9,8 @@ import PropTypes from "prop-types";
 import "./App.css";
 import CardDetail from "../components/CardDetail";
 import Home from "../components/Home";
-import { fetchData } from "../actions";
-import Spinner from "../components/Spinner";
+import { fetchDataIfNeeded } from "../actions";
+import Spinner from "../components/utilities/Spinner";
 
 class App extends Component {
 
@@ -20,9 +20,8 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
     const { dispatch } = this.props;
-    dispatch(fetchData());
+    dispatch(fetchDataIfNeeded());
   }
   render() {
     const { isFetching } = this.props;
@@ -43,7 +42,6 @@ const mapStateToProps = state => {
   const { isFetching, data } = AppState || {
     isFetching: false
   };
-  console.log(data, 'proptypes')
   return {
     isFetching,
     data

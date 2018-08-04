@@ -23,7 +23,8 @@ const AppState = (
     case GET_ID_ITEM: {
        return {
           ...state,
-          item: state.data.filter( ({id}) => id === action.id)
+          item: state.data
+          .find( ({id}) => id === action.id)
        }
     }
 

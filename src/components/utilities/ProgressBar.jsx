@@ -5,13 +5,15 @@ const Progress = styled.progress`
   width: 100%;
   height: 10px;
   background-color: grey;
-
+  border-radius: 5px;
   &::-webkit-progress-bar {
      background-color: #fafafa;
+     border-radius: 5px;
   }
 
   &::-webkit-progress-value {
      background-color: #f6cb47;
+     border-radius: 5px;
   }
 
   &.max {

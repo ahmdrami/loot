@@ -6,14 +6,9 @@ const Wrapper = styled.section`
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-`
-const Home = ( { data } ) => {
-   return (
-      <Wrapper>
-         { data.map((item, i) => (<Card key={i} item={item} />)) }
-      </Wrapper>
-   )
-}
-
+`;
+const Home = ({ data }) => {
+   return <Wrapper>{data.map((item, i) => <Card key={i} item={item} />)}</Wrapper>;
+};
 
 export default Home;
